@@ -38,7 +38,7 @@ for epoch in range(epochs):
     for images, labels in train_load:
         images, labels = images.to(device), labels.to(device)
 
-        optimizer.zero_grad()
+        optimizer.zero_grad() # clear old gradients because can accumulates gradient.
 
         outputs = model(images)
         loss = criterion(outputs, labels)
@@ -46,9 +46,9 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
 
-        total_loss += loss.item()
+        total_loss += loss.item() # Accumulate loss
 
-        _, preds = torch.max(outputs, 1)
+        _, preds = torch.max(outputs, 1) # _ get value
         train_correct += (preds == labels).sum().item()
         train_total += labels.size(0)
 
