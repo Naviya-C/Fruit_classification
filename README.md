@@ -31,10 +31,10 @@ The objective is to build a robust image classification system that can generali
 ```bash
 dataset/
   ├── train/
-  │   ├── apple/
-  │   ├── banana/
+  │   ├── apple 2/
+  │   ├── apple 1/
   │   ├── orange/
   ├── val/
-      ├── apple/
-      ├── banana/
+      ├── apple 2/
+      ├── apple 1/
       ├── orange/
