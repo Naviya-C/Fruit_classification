@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from src.predict import predict_image
 
-st.title("🍎 Fruit Classification App")
+st.title("Fruit Classification App")
 
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png"])
 

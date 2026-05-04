@@ -4,9 +4,9 @@ from preprocessing import data_transform
 import os
 
 
-train_data = datasets.ImageFolder("/home/naviya-c/Desktop/Projects/fruit_classification/dataset/fruits-360_original-size/fruits-360-original-size/Training", transform = data_transform['train_transform'])
-val_data = datasets.ImageFolder("/home/naviya-c/Desktop/Projects/fruit_classification/dataset/fruits-360_original-size/fruits-360-original-size/Validation", transform = data_transform['test_transform'])
-test_data = datasets.ImageFolder("/home/naviya-c/Desktop/Projects/fruit_classification/dataset/fruits-360_original-size/fruits-360-original-size/Test", transform = data_transform['test_transform'])
+train_data = datasets.ImageFolder("/home/naviya-c/Desktop/Projects/fruit-classification-ml/data/fruits-360-original-size/Training", transform = data_transform['train_transform'])
+val_data = datasets.ImageFolder("/home/naviya-c/Desktop/Projects/fruit-classification-ml/data/fruits-360-original-size/Validation", transform = data_transform['test_transform'])
+test_data = datasets.ImageFolder("/home/naviya-c/Desktop/Projects/fruit-classification-ml/data/fruits-360-original-size/Test", transform = data_transform['test_transform'])
 
 train_load = DataLoader(train_data, batch_size = 4, shuffle = True)
 val_load = DataLoader(val_data, batch_size = 4)

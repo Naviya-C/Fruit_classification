@@ -9,7 +9,7 @@ from model_architecture import ResNet, EfficientNet
 # -----------------------
 # Config
 # -----------------------
-MODEL_NAME = "efficientnet_b0"   # "resnet18", "resnet50", "efficientnet_b0"
+MODEL_NAME = "resnet50"   # "resnet18", "resnet50", "efficientnet_b0"
 EPOCHS = 10
 LR = 0.0003
 

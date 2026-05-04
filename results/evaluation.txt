@@ -1,0 +1,143 @@
+Model: efficientnet_b0
+Accuracy : 0.9121
+Precision: 0.9141
+Recall   : 0.9121
+F1 Score : 0.9116
+
+Model: resnet18
+Accuracy : 0.9219
+Precision: 0.9237
+Recall   : 0.9219
+F1 Score : 0.9222
+
+Model: resnet50
+Accuracy : 0.9294
+Precision: 0.9293
+Recall   : 0.9294
+F1 Score : 0.9290
+
+
+Model: efficientnet_b0
+Epoch [1/10]
+Train Acc: 0.7263
+Val Acc: 0.9276
+
+Epoch [2/10]
+Train Acc: 0.8789
+Val Acc: 0.9646
+
+Epoch [3/10]
+Train Acc: 0.9035
+Val Acc: 0.9695
+
+Epoch [4/10]
+Train Acc: 0.9150
+Val Acc: 0.9667
+
+Epoch [5/10]
+Train Acc: 0.9233
+Val Acc: 0.9580
+
+Epoch [6/10]
+Train Acc: 0.9276
+Val Acc: 0.9656
+
+Epoch [7/10]
+Train Acc: 0.9323
+Val Acc: 0.9629
+
+Epoch [8/10]
+Train Acc: 0.9341
+Val Acc: 0.9628
+
+Epoch [9/10]
+Train Acc: 0.9372
+Val Acc: 0.9739
+
+Epoch [10/10]
+Train Acc: 0.9389
+Val Acc: 0.9595
+
+
+Model: resnet18
+Epoch [1/10]
+Train Acc: 0.6764
+Val Acc: 0.9358
+
+Epoch [2/10]
+Train Acc: 0.8695
+Val Acc: 0.9517
+
+Epoch [3/10]
+Train Acc: 0.8965
+Val Acc: 0.9639
+
+Epoch [4/10]
+Train Acc: 0.9115
+Val Acc: 0.9703
+
+Epoch [5/10]
+Train Acc: 0.9185
+Val Acc: 0.9750
+
+Epoch [6/10]
+Train Acc: 0.9256
+Val Acc: 0.9673
+
+Epoch [7/10]
+Train Acc: 0.9272
+Val Acc: 0.9729
+
+Epoch [8/10]
+Train Acc: 0.9308
+Val Acc: 0.9763
+
+Epoch [9/10]
+Train Acc: 0.9351
+Val Acc: 0.9763
+
+Epoch [10/10]
+Train Acc: 0.9377
+Val Acc: 0.9839
+
+
+# Model: resnet50
+Epoch [1/10]
+Train Acc: 0.7797
+Val Acc: 0.9494
+
+Epoch [2/10]
+Train Acc: 0.9444
+Val Acc: 0.9806
+
+Epoch [3/10]
+Train Acc: 0.9664
+Val Acc: 0.9725
+
+Epoch [4/10]
+Train Acc: 0.9732
+Val Acc: 0.9781
+
+Epoch [5/10]
+Train Acc: 0.9786
+Val Acc: 0.9882
+
+Epoch [6/10]
+Train Acc: 0.9816
+Val Acc: 0.9852
+
+Epoch [7/10]
+Train Acc: 0.9834
+Val Acc: 0.9879
+
+Epoch [8/10]
+Train Acc: 0.9852
+Val Acc: 0.9822
+
+Epoch [9/10]
+Train Acc: 0.9864
+Val Acc: 0.9918
+
+Epoch [10/10]
+Train Acc: 0.9873
+Val Acc: 0.9894
