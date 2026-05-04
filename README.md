@@ -216,11 +216,8 @@ optimizer = optim.Adam(
 
 ## 🚀 Future Improvements
 
-* Fine-tune deeper layers for improved accuracy
-* Add confusion matrix visualization
 * Implement training/validation curves
 * Deploy using Streamlit
-* Add top-k prediction confidence
 
 ---
 
