@@ -149,14 +149,12 @@ fruit-classification-ml/
 ├── src/
 │   ├── train.py
 │   ├── evaluate.py
-│   └── model_architecture.py
-│
-├── preprocess/
-│   └── data_load.py
+│   ├── model_architecture.py
+|   ├── data_load.py
+|   └── predict.py
 │
 ├── models/
 ├── results/
-│   ├── accuracy.txt
 │   └── evaluation.txt
 │
 ├── app/
