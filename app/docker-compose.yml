@@ -1,4 +1,17 @@
 services:
 
   back-end:
-    build: 
+    build: ./backend
+    container_name: fruit_class_backend
+    ports:
+      - "8000:8000"
+
+  front-end:
+    build: ./frontend
+    container_name: fruit_class_frontend
+    ports:
+      - "8003:8003"
+    depends_on:
+      - back-end
+    environment:
+      - API_HOST=http://back-end:8000
