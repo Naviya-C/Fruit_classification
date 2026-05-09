@@ -1,4 +1,4 @@
 services:
 
-  front_end:
-    
+  back-end:
+    build: 
