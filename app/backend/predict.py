@@ -2,7 +2,7 @@ from torchvision import transforms
 import torch
 from torchvision.models import resnet50
 from PIL import Image
-import io
+
 
 
 check_point = torch.load(

@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, UploadFile
+from fastapi import FastAPI, UploadFile
 from PIL import Image
 
 from app.backend.predict import predict
