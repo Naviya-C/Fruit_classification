@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import os
 
-from data_load import train_load, val_load, num_class
+from data_load import train_load, val_load, num_class, class_names
 from model_architecture import ResNet, EfficientNet
 
 # -----------------------
@@ -56,6 +56,8 @@ optimizer = optim.Adam(
 # Training Loop
 # -----------------------
 best_val_acc = 0
+
+class_names = class_names()
 
 for epoch in range(EPOCHS):
 
@@ -110,30 +112,41 @@ for epoch in range(EPOCHS):
         save_path = f"models/{MODEL_NAME}_best.pth"
 
         if isinstance(model, nn.DataParallel):
-            torch.save(model.module.state_dict(), save_path)
+            torch.save({
+                "model_state": model.module.state_dict(), 
+                "model_names": class_names
+                },save_path)
         else:
-            torch.save(model.state_dict(), save_path)
+            torch.save({
+                "model_state": model.state_dict(), 
+                "model_names": class_names
+                },save_path)
 
     # ===== LOG =====
-    print(f"\nEpoch [{epoch+1}/{EPOCHS}]")
-    print(f"Loss: {avg_loss:.4f}")
-    print(f"Train Acc: {train_acc:.4f}")
-    print(f"Val Acc: {val_acc:.4f}")
+    print(f"\nEpoch [{epoch+1}/{EPOCHS}]   Loss: {avg_loss:.4f}   Train Acc: {train_acc:.4f}   Val Acc: {val_acc:.4f}")
 
 # -----------------------
 # Save Final Model
 # -----------------------
 final_path = f"models/{MODEL_NAME}_final.pth"
 
+
 if isinstance(model, nn.DataParallel):
-    torch.save(model.module.state_dict(), final_path)
+    torch.save({
+        "model_state": model.module.state_dict(),
+        "model_names": class_names
+    }, final_path)
+
 else:
-    torch.save(model.state_dict(), final_path)
+    torch.save({
+        "model_state":model.state_dict(),
+        "model_names": class_names
+        }, final_path)
 
 # -----------------------
 # Save Results
 # -----------------------
-os.makedirs("results", exist_ok=True)
+os.makedirs("results", exist_ok = True)
 
 with open("results/accuracy.txt", "w") as f:
     f.write(f"{MODEL_NAME} Best Validation Accuracy: {best_val_acc*100:.2f}%\n")

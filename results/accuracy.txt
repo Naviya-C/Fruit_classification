@@ -1,0 +1,1 @@
+resnet50 Best Validation Accuracy: 99.21%

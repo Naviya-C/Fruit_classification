@@ -23,3 +23,6 @@ train_data.class_to_idx == val_data.class_to_idx
 def num_class():
     return len(train_data.classes) 
 
+def class_names() -> list[str]:
+    return train_data.classes
+
